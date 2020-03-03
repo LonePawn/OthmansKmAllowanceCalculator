@@ -1,0 +1,30 @@
+.body 
+{
+	position: relative;
+	left: 20%;
+	width: 60%;
+	background-image: url('Images/mainBody.svg');
+}
+
+h1
+{
+	position: relative;
+	left: 20%;
+	width: 60%;
+	font-size: 30pt;
+	color: red;
+}
+
+body
+{
+	background-image: url(Images/background.svg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.footer
+{
+	position: relative;
+	text-align: right;
+	top: 90%;
+}

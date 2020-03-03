@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Othman's Kilometer Allowance Calculator</title>
+		<script type = "text/javascript" src = "othmansKmCalc.js"></script>
+		<link rel = "stylesheet" type = "text/css" href = "stylesheet1.css" />
+	</head>
+
+	<body onload = "populateListBoxes();">
+		<h1>OTHMAN'S KILOMETER ALLOWANCE CALCULATOR</h1>
+		<div class = "body">
+			<fieldset>
+				<legend>Itenerary</legend>
+				<table>
+					<tr>
+						<td>From: </td>
+						<td>
+							<input type = "text" id = "srcText" oninput = "filterSrcList(this.value.toLowerCase());"/>
+						</td>
+
+						<td>To: </td>
+						<td>
+							<input type = "text" id = "dstText" oninput = "filterDstList(this.value.toLowerCase());"/>
+						</td>
+
+					</tr>
+					<tr>
+						<td></td>
+						<td>
+							<select id = "srcListBox" size = "10" style = "width: 120px;" onchange ="srcSelected(this);">
+								<option>NONE</option>
+							</select>
+						</td>
+
+						<td></td>
+						<td>
+							<select id = "dstListBox" size = "10" style = "width: 120px;" onchange ="dstSelected(this);">
+								<option>NONE</option>
+							</select>
+						</td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<td>Number of Passengers:</td>
+						<td>
+							<button onclick = "decrementPassengers();">&lt</button>
+						</td>
+						<td id = "pNo">1</td>
+						<td>
+							<button onclick = "incrementPassengers();">&gt</button>
+						</td>	
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><button onclick = "calculateAllowance(document.getElementById('srcText').value, document.getElementById('dstText').value);" style = "height : 50px">Calculate Km Allowance</button></td>
+					</tr>
+				</table>
+			</fieldset>
+
+			<fieldset>
+				<legend>Output</legend>
+				<table>
+					<tr>
+						<td>Distance (Km): </td><td><input type = "text" id = "distance" readonly = "true" /></td>
+					</tr>
+					<tr>
+						<td>Allowance per person (N): </td><td><input type = "text" id = "singleAllowance" readonly = "true" /></td>
+					</tr>
+					<tr>
+						<td>Total Allowance (N): </td><td><input type = "text" id = "totalAllowance" readonly = "true" /></td>
+					</tr>
+				</table>
+			</fieldset>
+		</div>
+
+		<div class = "footer">&copy; 2020 Mustapha Othman</div>
+	</body>
+
+</html>
